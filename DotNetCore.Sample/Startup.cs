@@ -1,13 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using DotNetCore.Sample.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System;
 
 namespace DotNetCore.Sample
 {
@@ -23,6 +22,15 @@ namespace DotNetCore.Sample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<SampleContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
+
+            services.AddDbContextPool<SampleContext>(options => options
+                // replace with your connection string
+                .UseMySql(Configuration.GetConnectionString("Default"), mySqlOptions => mySqlOptions
+                    // replace with your Server Version and Type
+                    .ServerVersion(new Version(5, 6, 0), ServerType.MySql)
+            ));
+
             services.AddControllersWithViews();
         }
 
