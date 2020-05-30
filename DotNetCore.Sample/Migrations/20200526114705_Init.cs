@@ -11,12 +11,15 @@ namespace DotNetCore.Sample.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Pk_Id = table.Column<Guid>(nullable: false),
+                    Name = table.Column<string>(maxLength: 20, nullable: false),
+                    Description = table.Column<string>(maxLength: 200, nullable: true),
+                    IsShelf = table.Column<bool>(nullable: false),
+                    ModifyBy = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Books", x => x.Id);
+                    table.PrimaryKey("PK_Books", x => x.Pk_Id);
                 });
         }
 

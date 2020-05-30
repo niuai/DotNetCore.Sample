@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Sample", "DotNetCore.Sample\DotNetCore.Sample.csproj", "{3B21C852-D879-4E4E-A4FC-C4CFFD64604F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Sample", "DotNetCore.Sample\DotNetCore.Sample.csproj", "{3B21C852-D879-4E4E-A4FC-C4CFFD64604F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.SubWeb", "DotNetCore.SubWeb\DotNetCore.SubWeb.csproj", "{F1758ED3-FB0E-4BFB-9D21-3C5ABAC949EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3B21C852-D879-4E4E-A4FC-C4CFFD64604F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B21C852-D879-4E4E-A4FC-C4CFFD64604F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B21C852-D879-4E4E-A4FC-C4CFFD64604F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1758ED3-FB0E-4BFB-9D21-3C5ABAC949EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1758ED3-FB0E-4BFB-9D21-3C5ABAC949EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1758ED3-FB0E-4BFB-9D21-3C5ABAC949EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1758ED3-FB0E-4BFB-9D21-3C5ABAC949EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

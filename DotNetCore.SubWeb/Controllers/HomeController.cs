@@ -1,24 +1,21 @@
-﻿using DotNetCore.Sample.DataAccess;
-using DotNetCore.Sample.DataAccess.Entities;
-using DotNetCore.Sample.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using DotNetCore.SubWeb.Models;
 
-namespace DotNetCore.Sample.Controllers
+namespace DotNetCore.SubWeb.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        //private readonly SampleContext _db;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            //_db = db;
         }
 
         public IActionResult Index()
@@ -28,18 +25,6 @@ namespace DotNetCore.Sample.Controllers
 
         public IActionResult Privacy()
         {
-            //var records = _db.Books.ToList();
-
-            //_db.Books.Add(new Book
-            //{
-            //    Id = Guid.NewGuid(),
-            //    Name = $"Testing-{DateTime.UtcNow.Ticks}",
-            //    Description = "Hello World!",
-            //    IsShelf = true,
-            //    ModifyBy = Guid.NewGuid()
-            //});
-            //_db.SaveChanges();
-
             return View();
         }
 
